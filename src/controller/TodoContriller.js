@@ -42,12 +42,6 @@ exports.ReadTodo=(req, res)=>{
     })
 }
 exports.ReadTodoById=(req, res)=>{
-    TodoModel.find({_id:req.params.id}, (err, data)=>{
-        if(err){
-            res.status(500).json({"status":"fail", "data":err})
-        } else{
-            res.status(200).json({"status":"success", "data":data})
-        }
-    })
+    res.send("Hello World")
 }
 
